@@ -33,6 +33,14 @@ public class User {
     @Column(nullable = false, unique = true)
     private String email;
 
+    /**
+     * Constructor for creating a user without an ID.
+     *
+     * @param firstName the first name of the user
+     * @param lastName  the last name of the user
+     * @param birthdate the birthdate of the user
+     * @param email     the email of the user
+     */
     public User(
             final String firstName,
             final String lastName,
@@ -45,5 +53,27 @@ public class User {
         this.email = email;
     }
 
+    /**
+     * Constructor for creating a user with an ID.
+     *
+     * @param id        the ID of the user
+     * @param firstName the first name of the user
+     * @param lastName  the last name of the user
+     * @param birthdate the birthdate of the user
+     * @param email     the email of the user
+     */
+    public User(
+            final Long id,
+            final String firstName,
+            final String lastName,
+            final LocalDate birthdate,
+            final String email) {
+
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthdate = birthdate;
+        this.email = email;
+    }
 }
 

@@ -24,10 +24,25 @@ public interface UserProvider {
     Optional<User> getUserByEmail(String email);
 
     /**
+     * Retrieves all users with an email containing the given fragment.
+     *
+     * @param emailFragment The fragment to search for in the email
+     * @return An {@link Optional} containing the all users with an email containing the given fragment
+     */
+    List<User> findAllUsersByEmailCorrelation(String emailFragment);
+
+    /**
      * Retrieves all users.
      *
      * @return An {@link Optional} containing the all users,
      */
     List<User> findAllUsers();
 
+    /**
+     * Retrieves all users older than the given age.
+     *
+     * @param age The age to compare against
+     * @return An {@link Optional} containing the all users older than the given age
+     */
+    List<User> findAllUsersOlderThan(int age);
 }
