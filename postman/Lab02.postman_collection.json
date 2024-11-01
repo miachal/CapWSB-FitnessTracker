@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "88c4f576-e495-4fe7-9a5b-e9f539bda41e",
+		"name": "Lab02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39436113"
+	},
+	"item": [
+		{
+			"name": "GetAllSimpleUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9999/v1/users/simple",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"v1",
+						"users",
+						"simple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9999/v1/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Test11\",\r\n    \"lastName\":\"Tester11\",\r\n    \"birthdate\":\"2024-11-01\",\r\n    \"email\":\"Test11Tester11@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9999/v1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Test11\",\r\n    \"lastName\":\"Tester11\",\r\n    \"birthdate\":\"2024-11-01\",\r\n    \"email\":\"Updated@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9999/v1/users/11",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"v1",
+						"users",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9999/v1/users/11",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"v1",
+						"users",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindByEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9999/v1/users/email?email=emma",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"v1",
+						"users",
+						"email"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "emma"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOlder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9999/v1/users/older/23",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"v1",
+						"users",
+						"older",
+						"23"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
