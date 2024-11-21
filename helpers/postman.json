@@ -180,6 +180,134 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "List all trainings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{service}}/v1/trainings",
+					"host": [
+						"{{service}}"
+					],
+					"path": [
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all trainings for specific user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{service}}/v1/trainings/1",
+					"host": [
+						"{{service}}"
+					],
+					"path": [
+						"v1",
+						"trainings",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all trainings after",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{service}}/v1/trainings/finished/2021-05-18",
+					"host": [
+						"{{service}}"
+					],
+					"path": [
+						"v1",
+						"trainings",
+						"finished",
+						"2021-05-18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all trainings by activity type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{service}}/v1/trainings/activityType?activityType=TENNIS",
+					"host": [
+						"{{service}}"
+					],
+					"path": [
+						"v1",
+						"trainings",
+						"activityType"
+					],
+					"query": [
+						{
+							"key": "activityType",
+							"value": "TENNIS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create training",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{service}}/v1/training",
+					"host": [
+						"{{service}}"
+					],
+					"path": [
+						"v1",
+						"training"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update training",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"1\",\n    \"startTime\": \"2024-04-01T11:00:00\",\n    \"endTime\": \"2024-04-01T11:00:00\",\n    \"activityType\": \"RUNNING\",\n    \"distance\": 10.52,\n    \"averageSpeed\": 8.2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{service}}/v1/trainings/1",
+					"host": [
+						"{{service}}"
+					],
+					"path": [
+						"v1",
+						"trainings",
+						"1"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
