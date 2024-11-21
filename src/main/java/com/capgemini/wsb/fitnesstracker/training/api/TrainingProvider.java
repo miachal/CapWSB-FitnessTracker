@@ -1,18 +1,18 @@
 package com.capgemini.wsb.fitnesstracker.training.api;
 
-import com.capgemini.wsb.fitnesstracker.user.api.User;
+import com.capgemini.wsb.fitnesstracker.training.internal.ActivityType;
 
+import java.time.LocalDate;
 import java.util.Optional;
+import java.util.List;
 
 public interface TrainingProvider {
-
-    /**
-     * Retrieves a training based on their ID.
-     * If the user with given ID is not found, then {@link Optional#empty()} will be returned.
-     *
-     * @param trainingId id of the training to be searched
-     * @return An {@link Optional} containing the located Training, or {@link Optional#empty()} if not found
-     */
-    Optional<User> getTraining(Long trainingId);
+    Optional<Training> getTraining(Long trainingId);
+    List<Training> findAllTrainings();
+    List<Training> findAllTrainingsByUserId(Long userId);
+    List<Training> findTrainingsAfter(LocalDate date);
+    List<Training> findTrainingsByActivityType(ActivityType type);
+    Training createTraining(Training training);
+    Training updateTraining(Training training);
 
 }
